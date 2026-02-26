@@ -2,7 +2,23 @@
 ////*If the data is constant but pointer not then we don't need to initialize it when we declare it like const int *p;  but if we have constant pointer we must have to initialize while declaring it as it is necessary like int *const p=&x;   if we have both constant we will also initialize it while declaring like const int *const p=&x;
 #include<iostream>
 using namespace std;
+class f{
+  //constant pointers and constant data
+  int n;
+  int w;
+  const  int *const p;
+  public:
+  f(int a,int b):n(a),w(b),p(&n){}
+  void modify(){
+    //*p=10;
+    //p=&w;
+    //both are not possible as it is a constant data and constant pointer
+
+  }
+
+};
 class w{
+  //constant pointers and non constant data;
   int a;
   int b;
   int *const p=&a;
@@ -11,6 +27,7 @@ class w{
   void modify(){
     //p=&b;   we can not modify the pointer as it is constant but we can modify the data
     *p=a+1;
+
 
   }
   void display(){
@@ -49,5 +66,7 @@ int main(){
   w1.modify();
   w1.display();
 
+
+  f f1(25,23);
   return 0;
 }

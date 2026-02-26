@@ -42,5 +42,14 @@ name="Unknown";}
   m1.display();
   m2.display();
   m3.display();
+  //As shown it works as i defined no need for different default and parameterized constructors..
+
+
+  //Destructor 
+  //Destructor is used to release resources and perform cleanup when an object is destroyed
+  //the syntax is tilda +constructor~teacher(){delete xyz;}
+  //It runs after the main braces.
+  //Actually it is used to clean space produced by DMA other then that we don't really use it for simple allocation like static because the compiler may act as a destructor that it cleans up the space.destructors don't overload
+  
 
  }

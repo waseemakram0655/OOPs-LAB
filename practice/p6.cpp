@@ -26,7 +26,8 @@ class team{
   int c;
   public:
   team(int x,int y,int z):a(x),b(y),c(z){}
-  team& modify()//the return type is team& which is the refference to the same object.
+  team& modify()//the return type is team& which is the refference to the same object.like there is a class car and its object is toyota then what we will do is simply through refference make an other name for it named as aliance example car& p=toyota;
+  //then we can access its attributes through p like before we use toyota.speed=200; but now we can also use t.speed=200;
   {a=0;b=0;c=0;
   return *this;//We will return this pointer
   }
@@ -52,4 +53,6 @@ int main(){
   team t1(5,10,15);
   t1.display();
   t1.modify().display();
+  //As i mentioned the chaining is created
+
 }

@@ -4,6 +4,7 @@
 #include<iostream>
 using namespace std;
 class object{
+  //A static member function can only access static function not normal functions
   int x=10;
   int y=52;
   //static data members
